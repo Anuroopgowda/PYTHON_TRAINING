@@ -32,18 +32,18 @@ while start<=end:
 #     s1=i+" "+s1
 # print(s1)
 
-
-s="Hi Mirafra"
-s1=""
-s2=""
-for i in s:
-    if i!=" ":
-        s1=s1+i
-        s3 = s1
-    elif i==" ":
-        s2=" "+s1
-        s1=""
-print(s3+s2)
+#
+# s="Hi Mirafra"
+# s1=""
+# s2=""
+# for i in s:
+#     if i!=" ":
+#         s1=s1+i
+#         s3 = s1
+#     elif i==" ":
+#         s2=" "+s1
+#         s1=""
+# print(s3+s2)
 
 
 
@@ -58,6 +58,20 @@ print(s3+s2)
 #     print("lst1")
 # else:
 #     print("lst2")
+
+def bubble_sort(arr):
+    for _ in range(len(arr)):
+        swap=True
+        for j in range(0,len(arr)-1):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+                swap=False
+        if swap:
+            break
+    return arr
+
+arr=[37,25,277,1,2,45,10,35]
+print(bubble_sort(arr))
 
 
 

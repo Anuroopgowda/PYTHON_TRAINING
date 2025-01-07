@@ -12,7 +12,7 @@ def menu(data):
         case 5:
             withdraw(data)
         case 6:
-            pass
+            exit()
         case _:
             print("enter correct input")
             main()
@@ -67,6 +67,9 @@ def deposit(data):
         if data[account_no][1]==password:
             print("password matched")
             amount=int(input("Enter the amount to deposit:"))
+            if amount<0:
+                print("enter amount correctly!")
+                deposit(data)
             print('amount deposited to your account:',amount)
             data[account_no][2]+=amount
             print('current bank balance:',data[account_no][2])
