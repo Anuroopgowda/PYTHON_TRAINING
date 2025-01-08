@@ -1,6 +1,9 @@
+import datetime
+
+# menu function
 def menu(data):
     print("MENU".center(44,"="))
-    print("\n 1.new user \t 2.existing user\t 3.Balance \n 4.Deposit \t 5.withdraw \t6.exit")
+    print("1.new user \n2.existing user\n3.Balance\n4.Deposit \n5.withdraw \n6.Transaction History\n7.exit")
     print("=" * 44)
     user_input = int(input("Enter your choice:"))
     match user_input:
@@ -15,16 +18,19 @@ def menu(data):
         case 5:
             withdraw(data)
         case 6:
+            transaction_details(data)
+        case 7:
             exit()
         case _:
             print("enter correct input")
             main()
 
 
-
+# func to create new user
 def new_user(data):
     print("-"*44)
     account_no=int(input("Enter account no:"))
+    # if account no exists
     if account_no in data:
         print('user account already exists')
     else:
@@ -32,7 +38,7 @@ def new_user(data):
         password=input("Enter password:")
 
         init_balance=0.0
-        data[account_no]=[name,password,init_balance]
+        data[account_no]=[name,password,init_balance,[]]
         print("NAME:", data[account_no][0])
         print("ACCOUNT NO:", account_no)
         print("BALANCE:", data[account_no][2])
@@ -80,6 +86,9 @@ def deposit(data):
                 deposit(data)
             else:
                 print('amount deposited to your account:', amount)
+
+                # transaction function
+                transaction(data,account_no,amount,"credited +")
                 data[account_no][2] += amount
 
                 print('current bank balance:', data[account_no][2])
@@ -111,6 +120,10 @@ def withdraw(data):
                 withdraw(data)
             else:
                 print('amount withdrawn from your account:', amount)
+
+                # transaction function
+                transaction(data, account_no, amount, "debited -")
+
                 data[account_no][2] -= amount
                 print('current bank balance:', data[account_no][2])
                 print("-" * 44)
@@ -125,11 +138,41 @@ def withdraw(data):
         menu(data)
 
 
+# Transaction history
+def transaction(data,account_no,amount,action):
+    data[account_no][3].append(action+str(amount)+" "+str(datetime.datetime.now()))
+    pass
 
 
+# Transaction details
+def transaction_details(data):
+    print("-" * 44)
+    account_no = int(input("enter account no:"))
+    if account_no in data:
+        password = input("enter password:")
+        if data[account_no][1] == password:
+            print("password matched")
+            if len(data[account_no][3])!=0:
+                i = 1
+                for trans in data[account_no][3]:
+                    print(str(i) + "." + trans)
+                    i += 1
+            else:
+                print("No Transaction History!")
+            menu(data)
+        else:
+            print("password unmatched")
+            print("-" * 44)
+            transaction_details(data)
+    else:
+        print("account does not exists")
+        print("-" * 44)
+        menu(data)
 
+
+# main function
 def main():
-
+    # dictionary to store all details
     data={}
     menu(data)
 
