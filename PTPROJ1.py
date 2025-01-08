@@ -33,6 +33,7 @@ def new_user(data):
         print("BALANCE:", data[account_no][2])
 
     print("-" * 30)
+
     menu(data)
 
 def existing_user(data):
@@ -92,6 +93,8 @@ def withdraw(data):
         if data[account_no][1] == password:
             print("password matched")
             amount = int(input("Enter the amount to withdraw:"))
+            if amount<0:
+                print("Enter amount greater than zero")
             if amount>data[account_no][2]:
                 print("Insufficient Balance")
                 print('bank balance:', data[account_no][2])
