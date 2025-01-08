@@ -51,17 +51,25 @@ c=b[::-1]
 
 # frozen set -
 
-a={2,3}
-b={1,4}
-# b=frozenset(a)
+# a={2,3}
+# b={1,4}
+# # b=frozenset(a)
+# #
+# # a.add(7)
+# # print(a)
+# # print(b)
+# print("union",a.union(b))
+# a.intersection(b)
 #
-# a.add(7)
-# print(a)
-# print(b)
-print("union",a.union(b))
-a.intersection(b)
+# row=int
 
-row=int
+# a=float(input())
+# a+=2
+# print(a)
+
+amount=1234
+str1=str(amount)
+print('x'*(len(str1)-2)+str1[len(str1)-2:])
 
 
 
