@@ -26,7 +26,7 @@ def menu(data):
             main()
 
 
-# func to create new user
+# function to create new user
 def new_user(data):
     print("-"*44)
     account_no=int(input("Enter account no:"))
@@ -38,7 +38,7 @@ def new_user(data):
         password=input("Enter password:")
 
         init_balance=0.0
-        data[account_no]=[name,password,init_balance,[]]
+        data[account_no]=[name,password,init_balance,[]]#for transaction
         print("NAME:", data[account_no][0])
         print("ACCOUNT NO:", account_no)
         print("BALANCE:", data[account_no][2])
@@ -46,7 +46,7 @@ def new_user(data):
     print("-" * 44)
 
     menu(data)
-
+# existing account
 def existing_user(data):
     print("-"*44)
     account_no=int(input("enter account no:"))
@@ -72,7 +72,7 @@ def existing_user(data):
 
 def balance(data):
     existing_user(data)
-
+# deposit function
 def deposit(data):
     print("-" * 44)
     account_no = int(input("enter account no:"))
@@ -102,7 +102,7 @@ def deposit(data):
         print("account does not exists")
         print("-" * 44)
         menu(data)
-
+# withdraw
 def withdraw(data):
     print("-" * 44)
     account_no = int(input("enter account no:"))

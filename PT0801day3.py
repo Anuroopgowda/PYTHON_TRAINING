@@ -34,9 +34,7 @@ c=b[::-1]
 
 # for i in range(1,len(a)-2,2):
 #     a[i]=b[len(b)-1-i]
-# a.pop()
-# a.pop()
-# print(a)
+# print(a[:len(b)-1])
 
 # wrapping -
 # transpose matrix
@@ -67,9 +65,9 @@ c=b[::-1]
 # a+=2
 # print(a)
 
-amount=1234
-str1=str(amount)
-print('x'*(len(str1)-2)+str1[len(str1)-2:])
+# amount=1234
+# str1=str(amount)
+# print('x'*(len(str1)-2)+str1[len(str1)-2:])
 
 
 
