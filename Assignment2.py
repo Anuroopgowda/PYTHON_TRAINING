@@ -20,10 +20,10 @@ lst4=[(1, 5), (3, 6), (4, 4), (2, 9)]
 result=list(map(lambda x:x[0]*x[1],filter(lambda x:x[0]<x[1],lst4)))
 print(result)
 
-# # 5
-# lst5=[2, 3, 2, 4, 5, 4]
-# result=list(map(lambda x:x**2,filter(lambda x: ,lst5)))
-# print(result)
+# 5
+lst5=[2, 3, 2, 4, 5, 4]
+result=list(map(lambda x:x**2 ,set(lst5)))
+print(result)
 
 # 6
 result=list(map(lambda x:x/2,filter(lambda x:x%4==0,range(0,21))))
