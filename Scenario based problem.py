@@ -28,12 +28,6 @@ def validate_date(n,dict2):
     else:
         print("Expired")
 
-
-
-
-
-
-
 n=int(input("code:"))
 dict2={1:['soap','13/01/2025'],
        2:['shampoo','01/12/2024']}
