@@ -11,8 +11,7 @@ fib = fibonacci()
 for _ in range(10):
     print(next(fib))
 
---‐-----‐‐------
-
+# ==========================================
 def running_sum():
     total = 0
     while True:
@@ -26,7 +25,7 @@ print(sum_gen.send(5))  # Add 5
 print(sum_gen.send(3))  # Add 3
 print(sum_gen.send(None))
 
-‐--‐-‐-‐
+# ======================================
 
 class PrimeIterator:
     def __init__(self, n):
