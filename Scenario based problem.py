@@ -16,7 +16,7 @@ for key,val in dict1.items():
         print("Sorry! the product cannot be delivered to the address you are entering.")'''
 
 # scenario2
-from datetime import datetime
+'''from datetime import datetime
 def validate_date(n,dict2):
     date1 = datetime(2025, 2, 14)
     print(int(dict2[n][1][6:]), int(dict2[n][1][3:5]), int(dict2[n][1][:2]))
@@ -35,7 +35,7 @@ if n in dict2:
     print("prod:",dict2[n][0])
     validate_date(n,dict2)
 else:
-    print("Enter the existing product code.")
+    print("Enter the existing product code.")'''
 
 # --scenario3-------------------
 # def find_price(item_name,quantity,dict1):
