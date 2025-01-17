@@ -1,11 +1,19 @@
-class Person:
-    "This is a person class"
-    name='anuroop'
-    age = 10
-    def greet(self):
-        print('Hello')
-print(Person.age)
-print(Person.greet)
-print(Person.__str__)
-harry = Person()
-harry.greet()
+class anuroop:
+    def __init__(self):
+        self.a="a"
+        self.b="b"
+class anuroop1(anuroop):
+    def __init__(self):
+        anuroop.__init__(self)
+    def add1(self):
+        return self.a+self.b
+
+a=anuroop1()
+print(a.add1())
+
+
+
+
+
+
+

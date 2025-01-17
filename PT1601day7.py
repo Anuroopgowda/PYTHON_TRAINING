@@ -70,15 +70,15 @@ class bill:
             return "true"
 
 
-a1=bill(70,30)
-a2=bill(40,50)
-a=a1+a2
-b=a>a
-print(b)
-if b:
-    print("my bill greater your bill")
-else:
-    print("my bill greater your bill")
+# a1=bill(70,30)
+# a2=bill(40,50)
+# a=a1+a2
+# b=a>a
+# print(b)
+# if b:
+#     print("my bill greater your bill")
+# else:
+#     print("my bill greater your bill")
 
 # gettattr(2 args-class name,attribute in str "")[only for attributes]
 # settattr(3 args-class name,attr in str,changes)[only attr]
