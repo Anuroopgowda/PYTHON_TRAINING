@@ -50,6 +50,9 @@ print(res, type(res))
 res_decode = res.decode()
 print(res_decode, type(res_decode))
 
+def anu(a):
+    return a+1
+
 
 
 

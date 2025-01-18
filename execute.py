@@ -1,19 +1,24 @@
-class anuroop:
-    def __init__(self):
-        self.a="a"
-        self.b="b"
-class anuroop1(anuroop):
-    def __init__(self):
-        anuroop.__init__(self)
-    def add1(self):
-        return self.a+self.b
+#
+# class Node:
+#     def __init__(self,data):
+#         self.data=data
+#         self.next=None
+# print(type(Node))
 
-a=anuroop1()
-print(a.add1())
+# class A(type):
+#     def __init__(cls,name):
+#         name="anuroop"
+#
+# class B(metaclass=A):
+#     print(name)
+#     name="anuroop1"
+class MyMeta(type):
+    def __init__(cls, name, bases, dct):
+        print(f"Initializing class {name}")
+        super().__init__(name, bases, dct)
+
+class MyClass(metaclass=MyMeta):
+    print(name)
 
 
-
-
-
-
-
+# Output: Initializing class MyClass
