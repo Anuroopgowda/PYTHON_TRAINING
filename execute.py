@@ -90,4 +90,7 @@ from abc import ABC,abstractmethod
 # print(lst.insert(-20,10))
 # print(lst)
 
+from datetime import date
+date1=str(date.today())
+print(date1[1:])
 
