@@ -1,7 +1,7 @@
 from abc import ABC,abstractmethod
 class Product(ABC):
     @abstractmethod
-    def calculate_amount(self):
+    def calculate_amount(self,name):
         pass
 class customer(Product):
     def __init__(self,product_price,quantity):
