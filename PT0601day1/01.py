@@ -10,7 +10,9 @@ def func(n):
     res_list = list(map(int, res))
     print(sum(res_list))
 
+def anuroop(a,b):
+    return a+b
 
 
-ip = int(input('Enter the number: '))
-func(ip)
+# ip = int(input('Enter the number: '))
+# func(ip)
